@@ -1,0 +1,5 @@
+PyQt5>=5.15.0
+nltk>=3.8.0
+pymorphy2>=0.9.1
+pymorphy2-dicts-ru>=2.4.404171.4334429
+striprtf>=0.0.8
