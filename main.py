@@ -13,7 +13,7 @@ from striprtf.striprtf import rtf_to_text
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
-import pymorphy2
+import pymorphy3
 
 # Загрузка необходимых данных NLTK
 def setup_nltk():
@@ -42,7 +42,7 @@ russian_stopwords.update({
     'нибыть', 'либыть', 'тобыть', 'когда-нибудь', 'где-нибудь'
 })
 
-morph = pymorphy2.MorphAnalyzer()
+morph = pymorphy3.MorphAnalyzer()
 
 class TextProcessor:
     """Обработка текста: извлечение лексем и словосочетаний с учётом границ предложений"""
@@ -479,7 +479,7 @@ class LexiconEditor(QMainWindow):
             "</ul>"
             
             "<p><b>Используемые технологии:</b><br>"
-            "Python 3.8+, PyQt5, NLTK (punkt, stopwords), PyMorphy2, striprtf</p>"
+            "Python 3.8+, PyQt5, NLTK (punkt, stopwords), PyMorphy3, striprtf</p>"
             
             "<p><b>Соответствие требованиям задания:</b><br>"
             "Полностью соответствует варианту №7: русский язык, форматы TXT/RTF,<br>"
